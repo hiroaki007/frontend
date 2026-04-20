@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色変更</title>
+
+    <style>
+
+        .color {
+            color: red;
+        } 
+
+    </style>
+
+
+</head>
+<body>
+    
+    <button id="btn">変更</button>
+
+    <p id="p">色変更</p>
+
+
+    <script>
+
+        const btn = document.querySelector('#btn');
+        const p = document.querySelector('#p');
+
+        btn.addEventListener('click', () => {
+            document.getElementById('p').classList.toggle('color');
+        });
+
+
+
+
+    </script>
+
+
+</body>
+</html>

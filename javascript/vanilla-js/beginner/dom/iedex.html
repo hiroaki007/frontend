@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS バニラ 練習</title>
+</head>
+<body>
+    
+    <button id="btn">変更</button>
+
+    <p id="text">ありがとう</p>
+
+
+    <h2>課題C 2回目クリックで戻す</h2>
+
+    <button id="btn2">変更</button>
+
+    <p id="text2">ありがとう</p>
+
+
+    <script>
+
+        const btn = document.querySelector('#btn');
+        const text = document.querySelector('#text');
+
+        btn.addEventListener('click', function() {
+            text.textContent = "サンキュー"; 
+
+        });
+        
+        
+        // 課題C 2回目クリックで戻す
+
+        const btn2 = document.querySelector('#btn2');
+        const text2 = document.querySelector('#text2');
+
+        btn2 = addEventListener('click', () => {
+            if(text2.textContent === 'こんにちは') {
+                text2.textContent = 'こんばんは';
+            } else  {
+                text2.textContent = 'こんにちは';
+            }
+        });
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>多次元配列構文について</title>
+</head>
+<body>
+
+    <h1>多次元配列構文</h1>
+
+    <p>
+        - *多次元配列（たじげんはいれつ）**とは、
+
+        「**配列の中に、さらに配列が入っているデータの形**」のことです。
+
+        JavaScriptの配列は、数字・文字・オブジェクト・そして**別の配列**も中に入れることができます。
+
+        この「配列の中に配列がある状態」が **多次元配列** です。
+        <br>
+         JavaScriptでは、配列の中身だけを新しくそっくりそのまま複製できます。
+        <br>
+        
+   
+    </p>
+
+
+    
+    <script>
+        
+        //  具体例（JavaScriptコード）
+        const scores = [
+            [80, 90, 70],
+            [60, 75, 85],
+            [100, 95, 90]
+        ];
+
+        // console.log(scores[0][1]);
+
+        for (let i = 0; i < scores.length; i++) {
+            for (let j = 0; j < scores[i].length; j++) {
+                console.log(scores[i][j]);
+            }
+        }
+        
+
+     
+
+
+    </script>
+
+
+</body>
+</html>

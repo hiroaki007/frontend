@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>slice構文について</title>
+</head>
+<body>
+
+    <h1>slice構文</h1>
+
+    <p>
+        JavaScriptでは、配列（複数のデータをまとめて扱う箱）をコピーする方法がいくつか用意されています。
+        <br>
+         JavaScriptでは、配列の中身だけを新しくそっくりそのまま複製できます。
+        <br>
+        
+   
+    </p>
+
+
+    
+    <script>
+        
+        //  具体例（JavaScriptコード）
+        const original = [1, 2, 3];
+        const copy = original.slice();
+
+        console.log(copy);
+
+        const a = [10, 20];
+        const b = a.slice();
+
+        b[0] = 99;
+        console.log(b);
+
+        // ## 他にもある配列のコピー方法（よく使うもの）
+
+        // ### ① スプレッド構文（...）
+        const original2 = [4, 2, 3];
+        const copy2 = Array.from(original2);
+
+        console.log(copy2);
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

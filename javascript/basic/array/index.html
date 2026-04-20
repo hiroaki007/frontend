@@ -3,64 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>変数 練習</title>
+    <title>array構文について</title>
 </head>
 <body>
+
+    <h1>array</h1>
+
+    <p>**配列（はいれつ）とは、たくさんのデータをひとまとめにして順番に保存できる箱**のようなものです。
+
+JavaScriptでは、数・文字・真偽（true / false）など、**いろいろな種類のデータをまとめて扱うために配列を作成できます。**</p>
+
+
     
     <script>
-        
-        // 配列（リスト）からの多重代入
-        const numbers = [10, 20];
+       
+    //    一番シンプルな配列の作成
 
-        const [a, b] = numbers;
+    const numbers = [10, 20, 30];
 
-        console.log(a);
-        console.log(b);
+    // 文字の配列 
 
-        console.log(a + b);
+    const names = ["田中", "佐藤", "鈴木"];
 
+    // 空の配列を作成する
 
-        // オブジェクトでも多重代入できる
+    const items = [];
 
-        // const user = {
-        //     name: "Taro",
-        //     age : 20
-        // };
+    // 空の配列を作る意味
 
-        // const { name, age } = user;
+    items.push("りんご");
+    items.push("みかん");
 
-        // console.log(name);
-        // console.log(age);
-
-        // 中級者向け
-
-        // 配列の多重代入（分割代入）
-
-        const user1 = ["taro", 30, "Tokyo"];
-        let [name1, age1, city1] = user1;
-
-        console.log(name1); 
-        console.log(name1 = ("taro2")); 
-        console.log(name1, age1); 
-
-        // オブジェクトの多重代入（分割代入）
-
-        const user = {
-            id: 1,
-            name: "Taro",
-            role: "admin"
-        }
-
-        const { id, name, role } = user;
-
-        console.log(id, name, role);
-
-
-
-        // 初期値付き多重代入
-
-        const [x = 0, y = 0] = [10];
-
+    
 
 
     </script>

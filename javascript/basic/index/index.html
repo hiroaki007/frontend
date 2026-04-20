@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>index構文について</title>
+</head>
+<body>
+
+    <h1>index構文</h1>
+
+    <p>インデックス（index）**とは、配列（array）や文字列の中で「何番目にあるか」を示す番号のこと</p>
+
+
+    
+    <script>
+        
+        // 具体例（JavaScriptのコード）
+        const fruits = ["りんご", "バナナ", "みかん"];
+
+        console.log(fruits[0]);
+        console.log(fruits[1]);
+        console.log(fruits[2]);
+
+        // インデックスを使って「書き換え」もできる
+
+        fruits[1] = "ブドウ";
+        console.log(fruits);
+
+        // 配列の長さとインデックスの関係
+
+        console.log(fruits.length);
+
+
+        // for文とインデックス（超重要）
+
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(i, fruits[i]);
+        } 
+
+
+    </script>
+
+
+</body>
+</html>

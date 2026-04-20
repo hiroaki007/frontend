@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>length構文について</title>
+</head>
+<body>
+
+    <h1>length構文</h1>
+
+    <p>JavaScript（ジャバスクリプト）では、配列（複数のデータをまとめて管理する箱）に今いくつの要素が入っているかを簡単に調べることができます。
+        <br>
+        配列の要素数は「.length」を付けるだけで取得できます。
+        <br>
+        - `fruits.length` は
+    
+         → 配列の中に **何個の要素（データ）が入っているか** を教えてくれます。
+            
+        - 今回は 3 つの要素が入っているので、結果は **`3`** になります。
+    </p>
+
+
+    
+    <script>
+        
+        //  具体例（JavaScriptコード）
+        const fruits = ["りんご", "バナナ", "みかん"];
+
+        console.log(fruits.length);
+        
+
+        // ## よくある使い道の例
+
+        // ### ① for文（繰り返し）と一緒に使う
+
+        const scores = [80, 90, 70];
+
+        for (let i = 0; i < scores.length; i++) {
+            console.log(scores[i]);
+        }
+
+        // 空かどうかのチェック
+
+        const data = [];
+
+        if (data.length == 0) {
+            console.log("データは空です");
+        } 
+
+
+
+
+    </script>
+
+
+</body>
+</html>

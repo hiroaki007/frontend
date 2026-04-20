@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Json構文について</title>
+</head>
+<body>
+
+    <h1>Json</h1>
+
+    <p>JSONとは「データの持ち運び専用のシンプルなメモ帳の書き方」です。</p>
+
+
+    
+    <script>
+        // const user = {
+        //     name: "田中",
+        //     age: 25
+        // };
+    
+
+        // const jsonData = JSON.stringify(user);
+        // console.log(jsonData);
+
+
+        const jsonText = '{"name":"田中","age":25}';
+        const userData = JSON.parse(jsonText);
+
+        console.log(userData);
+
+
+    </script>
+
+</body>
+</html>

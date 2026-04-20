@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Break構文について</title>
+</head>
+<body>
+
+    <h1>Break構文</h1>
+
+    <p></p>
+
+
+    
+    <script>
+        
+        for(let i = 1; i <= 10; i++) {
+            if(i === 5) {
+                break;
+            }
+            console.log(i);
+        }
+        
+
+        // switch 文での break の例 
+
+        let fruit = "バナナ";
+
+        switch (fruit) {
+            case "りんご": 
+                console.log("赤い果物です");
+                break;
+            case "バナナ": 
+                console.log("黄色い果物です");
+                break;
+            default:
+                console.log("その他の果物です");
+        }
+    
+
+    </script>
+
+</body>
+</html>

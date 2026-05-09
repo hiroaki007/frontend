@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.header {
+    max-width: 1440px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.header__title h1 {
+    font-size: 23px;
+    font-weight: 800;
+    
+}
+
+
+.nav {
+    display: none;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    list-style-type: none;
+}
+
+
+
+/* ハンバーガーメニュー */
+
+
+.menu__icon {
+  
+    margin-top: 3px;
+    cursor: pointer;
+    
+}
+
+.menu__icon i {
+    font-size: 26px;
+}
+
+
+
+@media (min-width: 678px) {
+
+    .nav {
+        display: inline;
+        text-align: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .menu__icon {
+        display: none;
+    }
+}
+
+

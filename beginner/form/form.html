@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - シンプルデザイン -</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f7f7f7;
+        }
+
+        .form-container {
+            max-width: 480px;
+            margin: 40px auto;
+            padding: 24px;
+            background: #fff;
+            border-radius: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 4px; 
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+        }
+
+
+        button:disabled {
+            background: #ccc;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <h1>フォーム　基本シンプル実務</h1>
+
+    <div class="form-container">
+        <form action="" id="form">
+
+            <div class="form-group">
+                <label for="">名前</label>
+                <input type="text" name="name">
+                <p class="error" data-error="name"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="">メールアドレス</label>
+                <input type="email" name="email">
+                <p class="error" data-error="email"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="">パスワード</label>
+                <input type="password" name="password" id="password" placeholder="パウワードを入力">
+                <p class="error" data-error="password"></p>
+            </div>
+
+
+            <button type="submit" id="submitBtn">送信</button>
+
+
+        </form>
+    </div>
+
+
+</body>
+</html>

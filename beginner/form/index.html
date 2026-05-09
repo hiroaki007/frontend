@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Form Template</title>
+<style>
+  body { font-family: sans-serif; padding: 20px; }
+  .error { color: red; font-size: 12px; }
+  .hidden { display: none !important; }
+  .modal {
+    position: fixed; 
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+  }
+
+  .modal-content {
+    background: #fff; padding: 20px; border-radius: 8px;
+  }
+  button:disabled { background: #ccc; }
+</style>
+</head>
+<body>
+
+<form id="form">
+  <div>
+    <label>名前</label>
+    <input type="text" name="name">
+    <p class="error" data-error="name"></p>
+  </div>
+
+  <div>
+    <label>メール</label>
+    <input type="email" name="email">
+    <p class="error" data-error="email"></p>
+  </div>
+
+  <div>
+    <label>パスワード</label>
+    <input type="password" name="password">
+    <p class="error" data-error="password"></p>
+  </div>
+
+  <button type="submit" id="submitBtn">送信</button>
+</form>
+
+<!-- モーダル -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <p>送信してよろしいですか？</p>
+    <button type="button" id="confirm">はい</button>
+    <button type="button" id="cancel">キャンセル</button>
+  </div>
+</div>
+
+<!-- 完了 -->
+<div id="thanks" class="hidden">
+  <h2>送信ありがとうございました！</h2>
+</div>
+
+<script>
+const form = document.getElementById('form');
+const modal = document.getElementById('modal');
+const thanks = document.getElementById('thanks');
+const submitBtn = document.getElementById('submitBtn');
+
+form.addEventListener('input', checkForm);
+
+function checkForm() {
+  const data = new FormData(form);
+
+  const name = data.get('name');
+  const email = data.get('email');
+  const password = data.get('password');
+
+  const isValid =
+    name.trim() !== '' &&
+    email.includes('@') &&
+    password.length >= 8;
+
+  submitBtn.disabled = !isValid;
+}
+
+
+// submit → モーダル表示
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); // ← ここで止める
+  modal.classList.remove('hidden');
+});
+
+// キャンセル
+document.getElementById('cancel').onclick = () => {
+  modal.classList.add('hidden');
+};
+
+
+
+// 確認 → 送信
+document.getElementById('confirm').onclick = async () => {
+  modal.classList.add('hidden');
+
+  submitBtn.textContent = '送信中...';
+  submitBtn.disabled = true;
+
+  const data = new FormData(form);
+
+  try {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: data
+    });
+
+    // 成功
+    form.style.display = 'none';
+    thanks.classList.remove('hidden');
+
+  } catch (err) {
+    alert('送信エラー');
+    submitBtn.disabled = false;
+    submitBtn.textContent = '送信';
+  }
+};
+</script>
+
+
+</body>
+</html>
